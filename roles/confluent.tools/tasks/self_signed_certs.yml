@@ -5,12 +5,12 @@
 
 - name: Copy CA Cert to Host
   copy:
-    src: "generated_ssl_files/{{ssl_self_signed_ca_cert_filename}}"
+    src: "{{generated_ssl_files_path}}/{{ssl_self_signed_ca_cert_filename}}"
     dest: "/var/ssl/private/generation/{{ssl_self_signed_ca_cert_filename}}"
 
 - name: Copy CA Key to Host
   copy:
-    src: "generated_ssl_files/{{ssl_self_signed_ca_key_filename}}"
+    src: "{{generated_ssl_files_path}}/{{ssl_self_signed_ca_key_filename}}"
     dest: "/var/ssl/private/generation/{{ssl_self_signed_ca_key_filename}}"
 
 - name: Create Truststore and Import the CA Cert
