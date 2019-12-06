@@ -11,7 +11,7 @@ all:
 #    truststore_path: "/var/ssl/private/{{inventory_hostname}}-truststore.jks"
 #    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
 #    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
-    generated_ssl_files_path: "/root/cp-ansible/generated_ssl_files_path"
+    generated_ssl_files_path: "/root/cp-ansible/generated_ssl_files"
 
 
 kafka_broker:
