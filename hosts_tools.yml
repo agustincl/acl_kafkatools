@@ -1,0 +1,16 @@
+all:
+  vars:
+    ansible_connection: ssh
+    ansible_user: ec2-user
+    ansible_become: true
+    ansible_ssh_private_key_file: /root/.ssh/keypair.pem
+    security_mode: plaintext
+kafka_broker:
+  hosts:
+    ip-10-100-2-224.us-west-2.compute.internal:
+    ip-10-100-2-215.us-west-2.compute.internal:
+    ip-10-100-2-23.us-west-2.compute.internal:
+tools:
+  hosts:
+    ip-10-100-12-47.us-west-2.compute.internal:
+
