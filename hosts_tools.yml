@@ -5,6 +5,13 @@ all:
     ansible_become: true
     ansible_ssh_private_key_file: /root/.ssh/keypair.pem
     security_mode: plaintext
+
+    #### TLS Configuration ####
+    ssl_truststore_filepath: "/tmp/certs/truststore.jks"
+    truststore_path: "/var/ssl/private/{{inventory_hostname}}-truststore.jks"
+    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
+    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
+
 kafka_broker:
   hosts:
     ip-10-100-2-224.us-west-2.compute.internal:
