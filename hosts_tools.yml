@@ -4,13 +4,15 @@ all:
     ansible_user: ec2-user
     ansible_become: true
     ansible_ssh_private_key_file: /root/.ssh/keypair.pem
-    security_mode: plaintext
+    security_mode: sasl_ssl
 
     #### TLS Configuration ####
-    ssl_truststore_filepath: "/tmp/certs/truststore.jks"
-    truststore_path: "/var/ssl/private/{{inventory_hostname}}-truststore.jks"
-    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
-    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
+#    ssl_truststore_filepath: "/tmp/certs/truststore.jks"
+#    truststore_path: "/var/ssl/private/{{inventory_hostname}}-truststore.jks"
+#    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
+#    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
+    generated_ssl_files_path: "/root/cp-ansible/generated_ssl_files_path"
+
 
 kafka_broker:
   hosts:
