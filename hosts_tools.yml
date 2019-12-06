@@ -12,6 +12,7 @@ all:
 #    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
 #    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
     generated_ssl_files_path: "/root/cp-ansible/generated_ssl_files"
+    keystore_expiration_days: 365
 
 
 kafka_broker:
