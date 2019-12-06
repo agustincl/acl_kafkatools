@@ -3,4 +3,4 @@
 - import_tasks: copy_ssl.yml
 
 # install tool
-#- import_tasks: install_tool.yml
+- import_tasks: install_tool.yml

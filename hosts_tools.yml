@@ -7,13 +7,8 @@ all:
     security_mode: sasl_ssl
 
     #### TLS Configuration ####
-#    ssl_truststore_filepath: "/tmp/certs/truststore.jks"
-#    truststore_path: "/var/ssl/private/{{inventory_hostname}}-truststore.jks"
-#    ssl_keystore_filepath: "/tmp/certs/{{inventory_hostname}}-keystore.jks"
-#    keystore_path: "/var/ssl/private/{{inventory_hostname}}-keystore.jks"
     generated_ssl_files_path: "/root/cp-ansible/generated_ssl_files"
     keystore_expiration_days: 365
-
 
 kafka_broker:
   hosts:
